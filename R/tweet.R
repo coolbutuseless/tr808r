@@ -26,7 +26,7 @@ pattern_to_text <- function(pat) {
 
   res <- paste(apply(mat, 1, paste, collapse = ""), collapse = "\n")
 
-  res <- paste("#RStats {tr808r}", res, sep = "\n")
+  res <- paste("#RStats #tr808r", res, sep = "\n")
 
   if (requireNamespace('clipr', quietly = TRUE)) {
     message("Pattern copied to clipboard in text format")
