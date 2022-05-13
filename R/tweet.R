@@ -111,10 +111,14 @@ text_to_tr808_state <- function(txt, bpm = 96) {
   first_pattern <- blank_pattern
   first_pattern$active <- res == 'x'
 
-  pattern <- list(first_pattern, blank_pattern, blank_pattern, blank_pattern)
+  pattern <- rep(list(blank_pattern), NPAT)
+  pattern[[1]] <- first_pattern
+
+  pattern_set <- logical(NPAT)
+  pattern_set[[1]] <- TRUE
 
   list(
-    pattern_set = c(TRUE, FALSE, FALSE, FALSE),
+    pattern_set = pattern_set,
     pattern     = pattern,
     bpm         = bpm
   )

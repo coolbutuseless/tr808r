@@ -1,7 +1,7 @@
 Package: tr808r
 Type: Package
 Title: Interactive TR-808 Drum Machine
-Version: 0.1.0
+Version: 0.1.1
 Author: mikefc
 Maintainer: mikefc <mikefc@coolbutuseless.com>
 Description: Interactive TR-808 drum machine.
