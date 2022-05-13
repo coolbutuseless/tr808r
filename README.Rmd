@@ -35,7 +35,7 @@ if (FALSE) {
 `{tr808r}` is a tiny sound-a-like for 
 [Roland's TR-808 drum machine](https://en.wikipedia.org/wiki/Roland_TR-808).
 
-This is a great tech demo for how 
+This is a tech demo for how 
 [`eventloop}`](https://github.com/coolbutuseless/eventloop) allows you to
 write complex interactive applications using just R.
 
@@ -69,16 +69,16 @@ remotes::install_github('coolbutuseless/tr808r')
 
 ## Compose your own
 
-* Press SPACE to play/pause
-* CLick boxes to toggle playback of that instrument at that time
+* Press SPACE to play/pause.
+* Click boxes to toggle playback of that instrument at that time.
 * There are 8 editable patterns. 
-* Use keys '1' to '8' to toggle pattern playback.  This will let you compose
-  longer rhythms by chaining together the playback.
-* Use SHIFT '1' - '8' to immediately jump to a particular pattern
-* UP and DOWN arrows will change tempo
-* 's' will save the machine state in the current directory in a time-stamped file.
-    * this can be related with `tr808(state = ...)`
-* 't' will output a text representatin of the current pattern which you can tweet!
+* Use keys '1' to '8' to toggle that pattern as active.  This will let you compose
+  longer rhythms by chaining together multiple patterns.
+* Use SHIFT '1' - '8' to immediately jump to a particular pattern.
+* UP and DOWN arrows will change BPM (Beats Per Minute).
+* Pressing 's' will save the machine state in the current directory in a time-stamped file.
+    * This file can be reloaded with `tr808(state = ...)`
+* Pressing 't' will output a text representatin of the current pattern which you can tweet!
 * You can play back a tweeted pattern by copying the text from twitter and passing
   it in to `tr808(state = ...)`
 
@@ -110,11 +110,11 @@ tr808(state = demo_songs[[1]])
 
 ## Tweeting patterns and playing back tweeted patterns
 
-This is a easy, fun(?) way to share patterns on twitter!
+This is an easy, fun(?) way to share patterns on twitter!
   
 #### Create your own tweetable  
   
-Press `t` (for twitter) within the application to print a text represetntation to 
+Press `t` (for twitter) within the application to print a text representation to 
 your R console.
 
 If you have [`{clipr}`](https://cran.r-project.org/package=clipr) installed then
